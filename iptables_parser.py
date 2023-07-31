@@ -24,12 +24,12 @@ class Chain:
         ]
         print("=== {} ===".format(self.name))
         for tableName in tableOrder:
-            print("--- {} ---".format(tableName))
+            print("    --- {} ---".format(tableName))
             commands = self.tables.get(tableName, [])
             if len(commands) == 0:
                 continue
             for command in commands:
-                print("{}".format(command))
+                print("        {}".format(command))
 
 chains = {}
 
